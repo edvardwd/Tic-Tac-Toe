@@ -146,7 +146,7 @@ def clearScreen():
     """Clears the terminal"""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def twoPlayer():
+def multiPlayer():
     """Runs the Tic Tac Toe game for two players"""
     board = np.zeros(shape = (3, 3), dtype= int)
 
@@ -154,7 +154,7 @@ def twoPlayer():
     print('You have chosen two-player mode.')
     time.sleep(1)
 
-    #take player names and asign them
+    #take player names and assign them
     playerDict = {}
     player1, player2 = takePlayerNames()
     playerDict[1] = player1
@@ -187,7 +187,7 @@ def singlePlayer():
     board = np.zeros(shape = (3, 3), dtype= int)
 
     #Welcome message
-    print('You have chosen one-player mode.')
+    print('You have chosen singleplayer mode.')
     time.sleep(1)
 
     playerDict = {}
@@ -249,8 +249,8 @@ def menu() -> None:
     time.sleep(1)
     while gamemode != '1' and gamemode != '2':
         print('''Choose gamemode:
-        1) Single-player (vs. computer)
-        2) Two-player (locally)
+        1) Singleplayer (vs. computer)
+        2) Multiplayer (locally)
         q) Quit''')
         gamemode = input("Enter choice: ")
         if gamemode == '1':
@@ -258,7 +258,7 @@ def menu() -> None:
             singlePlayer()
         elif gamemode == '2':
             clearScreen()
-            twoPlayer()
+            multiPlayer()
         elif gamemode == 'q':
             print("Bye!")
             return #quits
