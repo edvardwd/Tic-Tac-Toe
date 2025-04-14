@@ -1,5 +1,13 @@
-Simple Tic-Tac-Toe game to play multiplayer locally or singleplayer against the computer (the computer uses the Minimax algorithm to play).
+# Tic-Tac-Toe
 
-To play run "python TicTacToe.py" or "python3 TicTacToe.py"
+Simple terminal based Tic-Tac-Toe coded in Python. Game modes include local multiplayer and singleplayer vs the computer (who uses the minimax-algorithm to play).
 
-MinimaxTest.py simulates games to prove that the minimax algorithm works and that the AI cannot lose.
+## How to run
+```
+pip install -r requirements.txt
+python3 TicTacToe.py
+```
+### MiniMax algorithm
+In the singleplayer mode, the computer's moves are determined by the [minimax-algorithm](https://en.wikipedia.org/wiki/Minimax).\
+Games between the minimax-computer and random moves are simulated in minimaxTest.py to show that the computer cannot lose. The results of 500 games are as follows:\
+![Sim-results](Sim_of_500_games.png)
